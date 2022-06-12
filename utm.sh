@@ -28,8 +28,7 @@ function rawurlencode {
 function checkvm {
     VM_CONFIG_PATH="$UTM_ROOT/$1.utm/config.plist"
     if [ ! -f "${VM_CONFIG_PATH}" ]; then
-        echo $1 is not a valid VM.
-        exit 1
+        error "$1 is not a valid VM."
     fi
 }
 
@@ -65,7 +64,7 @@ function help {
 
 # make sure #args are > 0
 if [ $# -lt 1 ]; then
-    error Not enough arguments
+    error "Not enough arguments."
 fi
 
 # make sure VM exists
