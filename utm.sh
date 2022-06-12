@@ -65,7 +65,7 @@ function sendtext {
 }
 
 function ips {
-    arp -an | sed -n 's/.*\(192.168.6[0-9].[0-9]*\).*/\1/p'
+    arp -an | sed -n 's/.*\(192.168.6[0-9].[0-9]*\).*/\1/p' | grep -v ".255"
 }
 
 function help {
