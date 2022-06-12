@@ -1,4 +1,4 @@
-# utm-cli
+# `utmcli`
 
 `utm.sh` provides terminal access to some commonly used functions in UTM.
 
