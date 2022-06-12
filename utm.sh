@@ -45,7 +45,7 @@ function checkvm {
 function sshf {
     VM_CONFIG_PATH="$UTM_ROOT/$1.utm/config.plist"
     MAC=$(grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' "$VM_CONFIG_PATH")
-    IP=$(arp -an | grep $MAC | sed -n 's/.*\(192.168.6[0-9].[0-9]*\).*/\1/p')
+    IP=$(arp -an | grep -i "$MAC" | sed -n 's/.*\(192.168.6[0-9].[0-9]*\).*/\1/p')
     [ -z "$IP" ] && error "$1 is not running or connected to network."
     ssh $IP
 
