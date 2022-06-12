@@ -1,6 +1,6 @@
 # utm-cli
 
-`utm.sh` provide terminal access to some commonly used functions in UTM.
+`utm.sh` provides terminal access to some commonly used functions in UTM.
 
 ## Usage
 
