@@ -1,5 +1,15 @@
 #!/bin/bash
 
+usage="$(basename "$0") [argument] -- program to manage UTM
+
+argument:
+    help  show this help text
+    list  list all virtual machines
+    ip    list all IPs associated with QEMU
+    
+    {start, pause, resume, stop, ssh} [name]
+    "
+
 UTM_ROOT=$HOME/Library/Containers/com.utmapp.UTM/Data/Documents
 
 function error {
@@ -71,16 +81,6 @@ fi
 if [ $# -gt 1 ]; then
     checkvm "${@:2}"
 fi
-
-usage="$(basename "$0") [argument] -- program to manage UTM
-
-argument:
-    help  show this help text
-    list  list all virtual machines
-    ip    list all IPs associated with QEMU
-    
-    {start, pause, resume, stop, ssh} [name]
-    "
 
 case "$1" in
     help | -h | --help ) help ;;
