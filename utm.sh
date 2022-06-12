@@ -91,6 +91,5 @@ case "$1" in
     stop ) cmd stop ${@:2} ;;
     ip ) ips ;;
     ssh ) sshf "${@:2}" ;;
-    * ) ;;
+    * ) help ;;
 esac
-
