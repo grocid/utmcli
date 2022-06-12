@@ -97,7 +97,7 @@ fi
 case "$1" in
     help ) help ;;
     list ) listvms && exit 0 ;;
-    ip )   ips ;;
+    ip )   ips && exit 0;;
 esac
 
 # make sure VM exists
